@@ -1,0 +1,124 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background-color: #f8f8f8;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background-color: #e23744; /* Zomato red */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .logo img {
+  height: 45px;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+header ul li a:hover {
+  color: #ffddc1;
+}
+
+/* Main Section */
+main {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url("img/bg.png") center/cover no-repeat;
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+}
+
+main img {
+  height: 100px;
+  margin-bottom: 20px;
+  animation: fadeInDown 1.5s ease;
+}
+
+main p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  animation: fadeIn 2s ease;
+}
+
+main input {
+  width: 320px;
+  padding: 12px 15px;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+main input:focus {
+  width: 400px;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #e23744;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  header ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  main input {
+    width: 80%;
+  }
+}
